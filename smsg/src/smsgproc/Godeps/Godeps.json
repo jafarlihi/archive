@@ -1,0 +1,79 @@
+{
+	"ImportPath": "smsgproc",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/go-redis/redis",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal/consistenthash",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal/hashtag",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal/pool",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal/proto",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/influxdata/influxdb/client/v2",
+			"Comment": "v1.3.0rc1-150-g392fa03cf",
+			"Rev": "392fa03cf3cc98b78e606c34996976cea65b6814"
+		},
+		{
+			"ImportPath": "github.com/influxdata/influxdb/models",
+			"Comment": "v1.3.0rc1-150-g392fa03cf",
+			"Rev": "392fa03cf3cc98b78e606c34996976cea65b6814"
+		},
+		{
+			"ImportPath": "github.com/influxdata/influxdb/pkg/escape",
+			"Comment": "v1.3.0rc1-150-g392fa03cf",
+			"Rev": "392fa03cf3cc98b78e606c34996976cea65b6814"
+		},
+		{
+			"ImportPath": "github.com/lib/pq",
+			"Comment": "go1.0-cutoff-173-gdd1fe20",
+			"Rev": "dd1fe2071026ce53f36a39112e645b4d4f5793a4"
+		},
+		{
+			"ImportPath": "github.com/lib/pq/oid",
+			"Comment": "go1.0-cutoff-173-gdd1fe20",
+			"Rev": "dd1fe2071026ce53f36a39112e645b4d4f5793a4"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-oci8",
+			"Rev": "a406da5749859419ebd8b7ad51c8833e9a64e719"
+		},
+		{
+			"ImportPath": "github.com/op/go-logging",
+			"Comment": "v1-7-g970db52",
+			"Rev": "970db520ece77730c7e4724c61121037378659d9"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "f5079bd7f6f74e23c4d65efa0f4ce14cbd6a3c0f"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "25c4ec802a7d637f88d584ab26798e94ad14c13b"
+		}
+	]
+}

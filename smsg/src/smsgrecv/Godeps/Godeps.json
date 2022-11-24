@@ -1,0 +1,94 @@
+{
+	"ImportPath": "smsgrecv",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/fiorix/go-smpp/smpp",
+			"Rev": "2e4ae04cf991891bc3d2e38abe5122a3b66c01e6"
+		},
+		{
+			"ImportPath": "github.com/fiorix/go-smpp/smpp/pdu",
+			"Rev": "2e4ae04cf991891bc3d2e38abe5122a3b66c01e6"
+		},
+		{
+			"ImportPath": "github.com/fiorix/go-smpp/smpp/pdu/pdufield",
+			"Rev": "2e4ae04cf991891bc3d2e38abe5122a3b66c01e6"
+		},
+		{
+			"ImportPath": "github.com/fiorix/go-smpp/smpp/pdu/pdutext",
+			"Rev": "2e4ae04cf991891bc3d2e38abe5122a3b66c01e6"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal/consistenthash",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal/hashtag",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal/pool",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/go-redis/redis/internal/proto",
+			"Comment": "v6.5.4-4-g2fb3f0e",
+			"Rev": "2fb3f0e45fb2c55d79dd7e4b06b5281ae437debb"
+		},
+		{
+			"ImportPath": "github.com/satori/go.uuid",
+			"Comment": "v1.1.0-8-g5bf94b6",
+			"Rev": "5bf94b69c6b68ee1b541973bb8e1144db23a194b"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding",
+			"Rev": "836efe42bb4aa16aaa17b9c155d8813d336ed720"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/charmap",
+			"Rev": "836efe42bb4aa16aaa17b9c155d8813d336ed720"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/internal",
+			"Rev": "836efe42bb4aa16aaa17b9c155d8813d336ed720"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/internal/identifier",
+			"Rev": "836efe42bb4aa16aaa17b9c155d8813d336ed720"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/unicode",
+			"Rev": "836efe42bb4aa16aaa17b9c155d8813d336ed720"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/utf8internal",
+			"Rev": "836efe42bb4aa16aaa17b9c155d8813d336ed720"
+		},
+		{
+			"ImportPath": "golang.org/x/text/runes",
+			"Rev": "836efe42bb4aa16aaa17b9c155d8813d336ed720"
+		},
+		{
+			"ImportPath": "golang.org/x/text/transform",
+			"Rev": "836efe42bb4aa16aaa17b9c155d8813d336ed720"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "25c4ec802a7d637f88d584ab26798e94ad14c13b"
+		}
+	]
+}

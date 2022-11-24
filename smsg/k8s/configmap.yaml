@@ -1,0 +1,133 @@
+apiVersion: v1
+data:
+  smsgrecv.yaml: |
+    monitor_port: 9090
+    redis_connection_type: tcp
+    redis_address: redis-service:6379
+    redis_password: null
+    redis_database_number: 0
+    influxdb_active: false
+    influxdb_insert_interval_seconds: 2
+    influxdb_address: http://127.0.0.1:8086
+    influxdb_username: influxuser
+    influxdb_password: influxpass
+    influxdb_database: smsg
+    requeue_messages_after_ms: 3000
+    loggers_message_per_file: 5000
+    loggers_flush_after: 20
+    smpp_connections:
+      - id: 0
+        active: false
+        address: 192.168.20.20:12500
+        eli: 5
+        systemType:
+        username: smscuser
+        password: smscpass
+      - id: 1
+        active: true
+        address: smppsim-service:2775
+        eli: 5
+        systemType:
+        username: smppclient1
+        password: password
+  smsgproc.yaml: |
+    monitor_port: 9090
+    redis_connection_type: tcp
+    redis_address: redis-service:6379
+    redis_password: null
+    redis_database_number: 0
+    influxdb_active: false
+    influxdb_insert_interval_seconds: 2
+    influxdb_address: http://127.0.0.1:8086
+    influxdb_username: influxuser
+    influxdb_password: influxpass
+    influxdb_database: smsg
+    connections: 
+    - connection_type: HTTP
+      identifier: test-http-post
+      host: test-http-service
+      port: 8080
+      statement: $source sent message to $destination with the content of $message
+      request_type: POST
+      content_type: text/plain
+      path: /
+    - connection_type: Postgres
+      identifier: test-postgres
+      host: test-postgres-service
+      port: 5432
+      statement: INSERT INTO sms_received (source, destination, message) VALUES ($source, $destination, $message)
+      username: psuser
+      password: pspass
+      database: psdb
+    directives:
+    - name: this-is-a-directive-name
+      connection_identifier: test-postgres
+      judge_by_destination: true
+      destination_range_start: 9990
+      destination_range_end: 9999
+      judge_by_source: true
+      source_range_start: 202020
+      source_range_end: 202020
+    - name: this-is-another-directive
+      connection_identifier: test-http-post
+      judge_by_destination: true
+      destination_range_start: 9995
+      destination_range_end: 9995
+      judge_by_source: false
+      source_range_start: 0
+      source_range_end: 0
+  redis.conf: |
+    bind 0.0.0.0
+    protected-mode yes
+    port 6379
+    tcp-backlog 511
+    timeout 100
+    tcp-keepalive 300
+    daemonize no
+    supervised no
+    pidfile /var/run/redis_6379.pid
+    loglevel notice
+    logfile ""
+    databases 16
+    stop-writes-on-bgsave-error no
+    rdbcompression yes
+    rdbchecksum yes
+    dbfilename dump.rdb
+    dir ./
+    slave-serve-stale-data yes
+    slave-read-only yes
+    repl-diskless-sync no
+    repl-diskless-sync-delay 5
+    repl-disable-tcp-nodelay no
+    slave-priority 100
+    appendonly no
+    appendfilename "appendonly.aof"
+    appendfsync everysec
+    no-appendfsync-on-rewrite no
+    auto-aof-rewrite-percentage 100
+    auto-aof-rewrite-min-size 64mb
+    aof-load-truncated yes
+    lua-time-limit 5000
+    slowlog-log-slower-than 10000
+    slowlog-max-len 128
+    latency-monitor-threshold 0
+    notify-keyspace-events ""
+    hash-max-ziplist-entries 512
+    hash-max-ziplist-value 64
+    list-max-ziplist-size -2
+    list-compress-depth 0
+    set-max-intset-entries 512
+    zset-max-ziplist-entries 128
+    zset-max-ziplist-value 64
+    hll-sparse-max-bytes 3000
+    activerehashing yes
+    client-output-buffer-limit normal 0 0 0
+    client-output-buffer-limit slave 256mb 64mb 60
+    client-output-buffer-limit pubsub 32mb 8mb 60
+    hz 10
+    aof-rewrite-incremental-fsync yes
+kind: ConfigMap
+metadata:
+  name: smsg-config
+  namespace: default
+  resourceVersion: "1"

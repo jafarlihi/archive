@@ -1,0 +1,29 @@
+monitor_port: 9090
+redis_connection_type: tcp
+redis_address: 127.0.0.1:6379
+redis_password: null
+redis_database_number: 0
+influxdb_active: true
+influxdb_insert_interval_seconds: 2
+influxdb_address: http://127.0.0.1:8086
+influxdb_username: influxuser
+influxdb_password: influxpass
+influxdb_database: smsg
+requeue_messages_after_ms: 3000
+loggers_message_per_file: 5000
+loggers_flush_after: 20
+smpp_connections:
+  - id: 0
+    active: true
+    address: localhost:2775
+    eli: 5
+    systemType:
+    username: smppclient1
+    password: password
+  - id: 1
+    active: true
+    address: localhost:3775
+    eli: 5
+    systemType:
+    username: smppclient1
+    password: password

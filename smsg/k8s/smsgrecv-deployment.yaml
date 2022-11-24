@@ -1,0 +1,43 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: smsgrecv-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: smsgrecv
+    spec:
+      containers:
+      - name: smsgrecv
+        image: smsgrecv:0.1.0
+        args: ["/home/config/smsgrecv.yaml", "/home/logs"]
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        volumeMounts:
+        - mountPath: /home/config
+          name: config
+        - mountPath: /home/logs
+          name: logs
+      volumes:
+      - name: config
+        configMap:
+          name: smsg-config
+      - name: logs
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: smsgrecv-monitor
+spec:
+  ports:
+  - protocol: TCP
+    port: 9090
+    targetPort: 9090
+  selector:
+    app: smsgrecv

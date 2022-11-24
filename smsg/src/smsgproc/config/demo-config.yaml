@@ -1,0 +1,76 @@
+monitor_port: 9090
+redis_connection_type: tcp
+redis_address: 127.0.0.1:6379
+redis_password: null
+redis_database_number: 0
+influxdb_active: true
+influxdb_insert_interval_seconds: 2
+influxdb_address: http://127.0.0.1:8086
+influxdb_username: influxuser
+influxdb_password: influxpass
+influxdb_database: smsg
+connections: 
+  - connection_type: HTTP
+    identifier: test-http-get
+    host: 127.0.0.1
+    port: 8002
+    statement: ?sender=$source&receiver=$destination&msg=$message
+    request_type: GET
+    path: /bar
+  - connection_type: HTTP
+    identifier: test-http-post
+    host: 192.168.10.10
+    port: 8003
+    statement: $source sent message to $destination with the content of $message
+    request_type: POST
+    content_type: text/plain
+    path: /foo
+  - connection_type: Postgres
+    identifier: test-postgres
+    host: 127.0.0.1
+    port: 5432
+    statement: INSERT INTO sms_received (source, destination, message) VALUES ($source, $destination, $message)
+    username: psuser
+    password: pspass
+    database: psdb
+  - connection_type: Oracle
+    identifier: test-oracle
+    host: 192.168.10.10
+    port: 1521
+    statement: INSERT INTO sms_received(source, destination, message) VALUES ($source, $destination, $message)
+    username: system
+    password: oracle
+    sid: XE
+directives:
+  - name: first-directive
+    connection_identifier: test-postgres
+    judge_by_destination: true
+    destination_range_start: 6930
+    destination_range_end: 6980
+    judge_by_source: true
+    source_range_start: 994990000000
+    source_range_end: 994992000000
+  - name: another-directive
+    connection_identifier: test-oracle
+    judge_by_destination: true
+    destination_range_start: 6900
+    destination_range_end: 7000
+    judge_by_source: true
+    source_range_start: 994992000001
+    source_range_end: 994999999999
+  - name: one-more-directive
+    connection_identifier: test-http-post
+    judge_by_destination: true
+    destination_range_start: 8888
+    destination_range_end: 8888
+    judge_by_source: false
+    source_range_start: 0
+    source_range_end: 0
+  - name: last-directive
+    connection_identifier: test-http-post
+    judge_by_destination: false
+    destination_range_start: 0
+    destination_range_end: 0
+    judge_by_source: true
+    source_range_start: 994996666666
+    source_range_end: 994996666680

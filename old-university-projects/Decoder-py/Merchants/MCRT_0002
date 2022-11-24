@@ -1,0 +1,7 @@
+SYMBOL = 123RW24V // Contains non-DTMF chars, this file will not be loaded and error will be logged.
+DLTM = #
+LENGTH = 4 
+RPT = 5
+TLEN = 220
+PLEN = 220
+//One more comment

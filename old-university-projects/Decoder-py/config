@@ -1,0 +1,7 @@
+[Database]
+Host = 
+Port = 3306
+Username = root
+Password = 
+Database = 
+Table = Operations

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/exercism/cpp/word-count/word_count.cpp
+
+/home/user/exercism/cpp/word-count/word_count.h
+map
+-
+string
+-
+
+/home/user/exercism/cpp/word-count/word_count_test.cpp
+word_count.h
+/home/user/exercism/cpp/word-count/word_count.h
+boost/test/unit_test.hpp
+-
+map
+-
+

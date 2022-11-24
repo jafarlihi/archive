@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for error in form.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error.title() }} field is incomplete/incorrect.
+        </div>
+    {% endfor %}
+
+    <div class="row justify-content-md-center"
+    <div class="col-12 col-md-auto">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label>Name</label>
+                    {{ form.name(class='form-control', placeholder='Title of the book', required=True) }}
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Author</label>
+                    {{ form.author(class='form-control', placeholder="Author of the book", required=True) }}
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label>Release date</label>
+                    {{ form.release_date(class='form-control', placeholder="Year") }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <label>Cover image</label>
+                    <label class="custom-file">
+                        {{ form.image(class='custom-file-input') }}
+                        <span class="custom-file-control"></span>
+                    </label>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <label>Book PDF</label>
+                    <label class="custom-file">
+                        {{ form.pdf(class='custom-file-input', required=True) }}
+                        <span class="custom-file-control"></span>
+                    </label>
+                </div>
+                <div class="col-md-2 mb-2">
+                    <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <button class="btn btn-primary" type="submit">Add Book</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+{% endblock %}

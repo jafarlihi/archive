@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if new_books %}
+        {% for book in new_books %}
+            <div class="row">
+                <div class="card-body col-md-9">
+                    <h4 class="card-title">{{ book.name }}</h4>
+                    <p class="card-text">Author: {{ book.author }}.
+                        {% if book.release_date %} {{ book.release_date }} {% endif %}
+                    </p>
+                    <!-- Links -->
+                    <a href="{{ book.pdf_filename }}" class="card-link">Download PDF</a>
+                </div>
+
+                <div class="col-md-3">
+                    <img src="{{ book.image_filename }}" style="width: 150px; height: 200px;" />
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+    {% else %}
+        No books found.
+    {% endif %}
+
+{% endblock %}

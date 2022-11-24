@@ -1,0 +1,7 @@
+SYMBOL = ABCD*
+TESTVARIABLE = # // Contains unsupported string, this file will not be loaded and error will be logged. 
+LENGTH = A // Contains non-numeric length value, this file will not be loaded and error will be logged.
+RPT = 5
+TLEN = 220
+PLEN = 220
+VARIABLE = LOL // Another unsupported string, one more error will be logged.

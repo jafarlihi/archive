@@ -1,0 +1,13 @@
+[2016/09/19-16:44:01] Configuration of merchant type "decoder-app/Merchants/MCRT_0001" loaded.
+
+[2016/09/19-16:44:01] Configuration of merchant type "decoder-app/Merchants/MCRT_0000" loaded.
+
+[2016/09/19-16:44:01] Configuration of merchant type "decoder-app/Merchants/MCRT_0002" skipped, not loaded.
+[2016/09/19-16:44:01] Parameter for option "SYMBOL" is incorrect.
+
+[2016/09/19-16:44:01] Configuration of merchant type "decoder-app/Merchants/MCRT_0003" skipped, not loaded.
+[2016/09/19-16:44:01] Option "DLTM" not found.
+[2016/09/19-16:44:01] String "TESTVARIABLE=#" is not supported.
+[2016/09/19-16:44:01] Parameter for option "LENGTH" is incorrect.
+[2016/09/19-16:44:01] String "VARIABLE=LOL" is not supported.
+

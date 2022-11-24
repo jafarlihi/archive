@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/exercism/cpp/gigasecond/gigasecond.cpp
+gigasecond.h
+/home/user/exercism/cpp/gigasecond/gigasecond.h
+
+/home/user/exercism/cpp/gigasecond/gigasecond.h
+boost/date_time/posix_time/posix_time.hpp
+/home/user/exercism/cpp/gigasecond/boost/date_time/posix_time/posix_time.hpp
+
+/home/user/exercism/cpp/gigasecond/gigasecond_test.cpp
+gigasecond.h
+/home/user/exercism/cpp/gigasecond/gigasecond.h
+boost/test/unit_test.hpp
+-
+

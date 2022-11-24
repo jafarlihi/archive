@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/exercism/cpp/bob/bob.h
+string
+-
+
+/home/user/exercism/cpp/bob/bob_test.cpp
+bob.h
+/home/user/exercism/cpp/bob/bob.h
+boost/test/unit_test.hpp
+-
+

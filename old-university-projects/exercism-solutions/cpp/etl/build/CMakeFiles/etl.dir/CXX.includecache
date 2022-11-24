@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/exercism/cpp/etl/etl.cpp
+etl.h
+/home/user/exercism/cpp/etl/etl.h
+
+/home/user/exercism/cpp/etl/etl.h
+map
+-
+vector
+-
+
+/home/user/exercism/cpp/etl/etl_test.cpp
+etl.h
+/home/user/exercism/cpp/etl/etl.h
+map
+-
+boost/test/unit_test.hpp
+-
+

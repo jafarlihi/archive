@@ -1,0 +1,7 @@
+[
+    {
+        "command": "c++ -c -o transformations.out transformations.cpp",
+        "directory": "/home/user/Desktop/qu/opengl5",
+        "file": "/home/user/Desktop/qu/opengl5/transformations.cpp"
+    }
+]

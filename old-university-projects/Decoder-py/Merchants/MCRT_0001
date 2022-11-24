@@ -1,0 +1,7 @@
+SYMBOL = ABCD*
+DLTM = # // Test comment with DTMF chars #0123AB
+LENGTH = 4 
+RPT = 5
+TLEN = 220
+PLEN = 220
+//One more comment

@@ -1,0 +1,11 @@
+{
+  "name": "peccala",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "big.js": "^6.2.1",
+    "dotenv": "^16.0.2"
+  }
+}

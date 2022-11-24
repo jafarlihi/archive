@@ -1,0 +1,157 @@
+ul {
+    padding: 0;
+    margin: 0 0 20px 0;
+    list-style: none;
+}
+h1, h2 {
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+}
+p {
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+a:link, a:visited {
+    text-decoration: underline;
+    color: #000;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    padding: 5px 0;
+}
+ul li input[type="text"], ul li input[type="password"] {
+    width: 200px;
+}
+h1 {
+    font-size: 1.8em;
+}
+h2 {
+    font-size: 1.4em;
+}
+.logo {
+    font: 2em Arial;
+    margin: 0 0 10px 0;
+    padding: 0;
+    width: 200px;
+    color: #000;
+}
+body {
+    background: lightslategray;
+    font-family: Arial;
+    font-size: 0.8em;
+}
+#container, footer {
+    background: #fff;
+    width: 920px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    width: 940px;
+    padding: 10px;
+    margin: 0 auto 10px auto;
+}
+#container {
+    min-height: 500px;
+    border-radius: 5px 5px 0 0;
+}
+footer {
+    border-radius: 0 0 5px 5px;
+}
+.widget {
+    margin-bottom: 20px;
+}
+.widget h2 {
+    margin: 0 0 10px 0;
+    padding: 0 5px;
+    font-weight: normal;
+    border-bottom: 1px solid #ddd;
+}
+.widget .inner {
+    margin: 0 10px;
+}
+nav {
+    float: left;
+}
+nav ul {
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+}
+nav ul li.current {
+    font-weight: bold;
+}
+nav ul li a.last {
+    border-right: 0;
+}
+aside {
+    width: 260px;
+    float: right;
+    border-left: 1px dashed #aaa;
+    padding-left: 15px;
+    margin-left: 15px;
+}
+#login li.link {
+    margin-top: 5px;
+}
+footer {
+    border-top:1px dashed #ddd;
+    color: #999;
+}
+.clear {
+    clear: both;
+}
+.date {
+    position: absolute;
+    color: white;
+}
+.myButton {
+    border-top: 1px solid #96d1f8;
+    background: #778899;
+    background: -webkit-gradient(linear, left top, left bottom, from(#778899), to(#778899));
+    background: -webkit-linear-gradient(top, #778899, #778899);
+    background: -moz-linear-gradient(top, #778899, #778899);
+    background: -ms-linear-gradient(top, #778899, #778899);
+    background: -o-linear-gradient(top, #778899, #778899);
+    padding: 6.5px 13px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: #000000;
+    font-size: 13px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+   }
+.myButton:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+   }
+.myButton:active {
+    border-top-color: #778899;
+    background: #778899;
+   }
+.post {
+    border: 3px double lightslategray;
+    width: 67.25%;
+}
+post_author_text {
+    color: lightslategray;
+    font-weight: bold;
+}
+post_date_text {
+    color: lightslategray;
+}

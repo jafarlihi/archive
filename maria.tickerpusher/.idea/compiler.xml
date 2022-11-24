@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="maria-ng.main" target="11" />
+      <module name="maria-ng.test" target="11" />
+      <module name="maria.main" target="11" />
+      <module name="maria.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

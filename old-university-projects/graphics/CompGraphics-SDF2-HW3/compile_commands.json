@@ -1,0 +1,17 @@
+[
+    {
+        "command": "c++ -c -o line.out line.cpp",
+        "directory": "/home/user/Desktop/qu/opengl2",
+        "file": "/home/user/Desktop/qu/opengl2/line.cpp"
+    },
+    {
+        "command": "c++ -c -o circle.out circle.cpp",
+        "directory": "/home/user/Desktop/qu/opengl2",
+        "file": "/home/user/Desktop/qu/opengl2/circle.cpp"
+    },
+    {
+        "command": "c++ -c -o ellipse.out ellipse.cpp",
+        "directory": "/home/user/Desktop/qu/opengl2",
+        "file": "/home/user/Desktop/qu/opengl2/ellipse.cpp"
+    }
+]

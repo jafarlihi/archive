@@ -1,0 +1,8 @@
+[package]
+name = "game2048"
+version = "0.1.0"
+authors = ["Hikmat Jafarli <jafarlihi@gmail.com>"]
+
+[dependencies]
+rustfmt = "0.9.0"
+rand = "0.3.16"

@@ -1,0 +1,16 @@
+click==6.7
+Flask==0.12.2
+Flask-Script==2.0.5
+Flask-SQLAlchemy==2.2
+Flask-Uploads==0.2.1
+Flask-WTF==0.14.2
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+olefile==0.44
+PIL==1.1.7
+Pillow==4.2.1
+pillowcase==2.0.0
+SQLAlchemy==1.1.13
+Werkzeug==0.12.2
+WTForms==2.1

@@ -1,0 +1,53 @@
+import { Avatar, Badge, Spacer, Text } from "@nextui-org/react"
+import { IoChatbubblesSharp } from "react-icons/io5"
+import dateFormat from "dateformat"
+
+export default function TheadCard(props: any) {
+  return (
+    <div style={{ display: "flex", width: "100%", height: "40px" }}>
+      <Avatar />
+      <Spacer x={0.5} />
+      <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
+        <Text h5 style={{ margin: "0" }}>
+          {props.thread.title}
+        </Text>
+        <Text h6 color="gray" style={{ margin: "0" }} size={11}>
+          {dateFormat(props.thread.createdAt, "ddd mmm d yyyy")}
+        </Text>
+      </div>
+      <div style={{ display: "flex", height: "100%", alignItems: "center", width: "100px" }}>
+        <div style={{ width: "65px" }}>
+          <div style={{ float: "right" }}>
+            <Badge
+              isSquared
+              size="sm"
+              variant="flat"
+              style={{
+                color: "white",
+                backgroundColor: `#${props.thread.category.color}`,
+                height: "23.6875px",
+              }}
+            >
+              {props.thread.category.name}
+            </Badge>
+          </div>
+        </div>
+        <Spacer x={0.3} />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginLeft: "auto",
+            width: "35px",
+          }}
+        >
+          <IoChatbubblesSharp />
+          <Text h6 style={{ margin: "0", marginLeft: "2px" }}>
+            {props.thread.postCount}
+          </Text>
+        </div>
+      </div>
+      <Spacer x={2} />
+    </div>
+  )
+}
